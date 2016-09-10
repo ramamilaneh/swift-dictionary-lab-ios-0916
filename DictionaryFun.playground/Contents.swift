@@ -14,7 +14,7 @@
  */
 // write your code here
 
-
+var capitalOfStates=["New York":"Albany","Ohio":"Columbus","Florida":"Tallahassee","Georgia":"Atlanta","Kentucky":"Frankfort"]
 
 
 
@@ -23,7 +23,8 @@
 /*: question2
  ### 2. What is the type of the dictionary you created in Question 1?
  */
-
+// It is dictionary of String the type of the key and the values are String
+//capitalOfStates :[ String : String]
 
 
 
@@ -36,7 +37,7 @@
  */
 // write your code here
 
-
+var capital=capitalOfStates["Florida"]
 
 
 
@@ -48,7 +49,9 @@
  */
 // write your code here
 
-
+if let capital=capital {
+    print("The capital of Florida is \(capital)")
+}
 
 
 
@@ -60,7 +63,7 @@
  */
 // write your code here
 
-
+var anotherCapital=capitalOfStates["Pennsylvania"]
 
 
 
@@ -72,8 +75,12 @@
  */
 // write your code here
 
+if let anotherCapital=anotherCapital {
+    print("The capital of Pennsylvania is \(capital)")
 
-
+}else{
+    print("I don't know Pennsylvania's capital")
+}
 
 
 
@@ -84,7 +91,7 @@
  */
 // write your code here
 
-
+capitalOfStates["Pennsylvania"]="Harrisburg"
 
 
 
@@ -95,7 +102,11 @@
  ### 8. Retrieve Pennsylvania's capital from your dictionary. Unwrap it and print the message "Pennsylvania's capital is <Capital>" to the console.
  */
 // write your code here
-
+anotherCapital = capitalOfStates["Pennsylvania"]
+if let anotherCapital=anotherCapital {
+    print("The capital of Pennsylvania is \(capital)")
+    
+}
 
 
 
@@ -107,6 +118,8 @@
  ### 9. We don't really care about Pennsylvania's capital. Delete it from the dictionary. Print your dictionary to the console to ensure it's gone.
  */
 // write your code here
+capitalOfStates["Pennsylvania"]=nil
+print(capitalOfStates)
 
 
 
@@ -120,8 +133,9 @@
  */
 let state = "New York"
 // write your code here
-
-
+if let capital = capitalOfStates[state]{
+print("The Capital of \(state) is \(capital)")
+}
 
 
 
@@ -139,8 +153,9 @@ let state = "New York"
  Since there are multiple members for each band, the value of each key should be an `Array`.
  */
 // write your code here
+var memebersOfBand = ["Nirvana":["Kurt Cobain", "Krist Novoselic", "Dave Grohl"],"The Beatles":["John Lennon", "George Harrison", "Paul McCartney", "Ringo Starr","Kim Deal", "Kelley Deal", "Josephine Wiggs", "Jim Macpherson"],"Pixies":["Frank Black", "Joey Santiago", "Kim Deal", "David Lovering"]]
 
-
+print(memebersOfBand)
 
 
 
@@ -152,6 +167,8 @@ let state = "New York"
 /*: question12
  ### 12. What is the type of the dictionary you created in Question 11?
  */
+// member of band : [String : [String]]
+// The key is a String and the value is array of string
 
 
 
@@ -165,7 +182,10 @@ let state = "New York"
  */
 let bandName = "Pixies"
 // write your code here
-
+let member = memebersOfBand[bandName]
+if let members = member{
+  print("The members of the \(bandName) are \(members)")
+}
 
 
 
